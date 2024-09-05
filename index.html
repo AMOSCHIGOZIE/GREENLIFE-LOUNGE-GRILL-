@@ -3,240 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greenlife Lounge and Bar</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
             line-height: 1.6;
         }
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem;
-            margin-left: 30px;
-            font-style: italic;
-            text-align: center;
-            border-radius: 7px;
-        }
+
         nav {
-            margin: 0.5rem 0;
-        }
-        nav a {
+            background: green;
             color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
             margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
+            font-weight: bold;
         }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
         .hero {
-            background-image: url('image1.jpg'); /* Add your hero image path */
-            height: 250px;
-            background-size: cover;
-            text-align: center;
+            background: url('image1.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            margin-top: -7px;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 2rem 0;
+            text-align: center;
         }
+
         .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        .menu, .about, .contact, .reservation {
+            text-align: center;
+        }
+
+        .menu h2, .about h2, .contact h2, .reservation h2 {
             font-size: 2.5rem;
-        }
-  
-        h4 {
-          margin-top: -25px;
-          font-size: 23px;
-        }
-        .container {
-            padding: 20px;
-        }
-        .menu-table {
-            width: 100%;
-            border-collapse: collapse;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
-        .menu-table th, .menu-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        .menu-table th {
-            background-color: #4CAF50;
+
+        .menu-item {
+            width: 30%;
+            margin: 15px 0;
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about p {
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+
+        /* Contact Form */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px;
+            background: #27ae60;
             color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
+
+        .contact button:hover {
+            background: #2ecc71;
+        }
+
+        /* Reservation Section */
+        .reservation form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+         h1 {
+             text-align: center;
+             font-style: italic;
+             font-size: 25px;
+             color: grey;
+             
+         }
+    
+         h2 {
+             text-align: center;
+             font-style: italic;
+             font-size: 25px;
+             margin-top: -7px;
+             color: grey;
+             
+         }
+
+        .reservation input, .reservation textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .reservation button {
+            padding: 10px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reservation button:hover {
+            background: #3498db;
+        }
+
         footer {
-            background: #4CAF50;
+            background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 10px 0;
         }
-        .happy {
-            width: 100%;
-            border-radius: 9px;
+
+        @media(max-width: 768px) {
+            .menu-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>GREENLIFE LOUNGE</h1>
-  <h4> AND BAR </h3>
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#menu">Menu</a>
-        <a href="#events">Events</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reservation">Reservations</a></li>
+        </ul>
     </nav>
-</header>
+    <h1> Welcome </h1>
+    <h2>  To</h2>
+  <section class="hero" id="hero">
+    </section>
 
-<section class="hero">
-  
-  
-  
-</section>
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Grilled Chicken</h3>
+                <p>Price: $15 per plate</p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Prawns</h3>
+                <p>Price: $20 per plate</p>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetarian Delight</h3>
+                <p>Price: $12 per plate</p>
+            </div>
+             <div class="menu-item">
+                <h3>Spagetti </h3>
+                <p>Price: $1500 per plate</p>
+            </div>
+             <div class="menu-item">
+                <h3>Barbicue</h3>
+                <p>Price: $10000 per One </p>
+            </div>
+        </div>
+    </section>
 
-<div class="container" id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Greenlife Lounge and Bar, where we celebrate delicious food and refreshing drinks in a vibrant, nature-inspired environment. Our mission is to provide a unique dining experience that connects you with nature.</p>
-    <h3>Meet Our Team</h3>
-    <p>Our dedicated team is passionate about serving you the best culinary delights and drinks.</p>
-</div>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>At Greenlife Lounge and Bar, we combine a vibrant atmosphere with top-notch services to offer an unforgettable experience. Whether you're here for a meal, a drink, or just to relax, we ensure that every visit is special.</p>
+    </section>
 
-<div class="container" id="menu">
-    <h2>Menu</h2>
-    <h3>Appetizers</h3>
-    <table class="menu-table">
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Grilled Veggie Platter</td>
-            <td>$12</td>
-        </tr>
-        <tr>
-            <td>Spicy Spring Rolls</td>
-            <td>$8</td>
-        </tr>
-        <tr>
-            <td>Hummus with Pita Bread</td>
-            <td>$7</td>
-        </tr>
-        <tr>
-            <td>Caprese Skewers</td>
-            <td>$10</td>
-        </tr>
-      <tr>
-        <td> Barbicule </td>
-        <td> $10000</td>
-      </tr>
-    </table>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-    <h3>Main Courses</h3>
-    <table class="menu-table">
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Quinoa Salad Bowl</td>
-            <td>$15</td>
-        </tr>
-        <tr>
-            <td>Grilled Salmon with Asparagus</td>
-            <td>$20</td>
-        </tr>
-        <tr>
-            <td>Vegan Burger with Sweet Potato Fries</td>
-            <td>$14</td>
-        </tr>
-        <tr>
-            <td>Chicken Alfredo Pasta</td>
-            <td>$18</td>
-        </tr>
-    </table>
+    <section class="reservation" id="reservation">
+        <h2>Make a Reservation</h2>
+        <form action="">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <input type="date" name="date">
+            <input type="time" name="time">
+            <textarea name="specialRequests" rows="5" placeholder="Special Requests"></textarea>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
 
-    <h3>Desserts</h3>
-    <table class="menu-table">
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Chocolate Lava Cake</td>
-            <td>$7</td>
-        </tr>
-        <tr>
-            <td>Seasonal Fruit Tart</td>
-            <td>$6</td>
-        </tr>
-        <tr>
-            <td>Tiramisu</td>
-            <td>$8</td>
-        </tr>
-        <tr>
-            <td>Vegan Chocolate Mousse</td>
-            <td>$7</td>
-        </tr>
-    </table>
-
-    <h3>Drinks</h3>
-    <table class="menu-table">
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Signature Greenlife Cocktail</td>
-            <td>$10</td>
-        </tr>
-        <tr>
-            <td>Freshly Squeezed Juice</td>
-            <td>$5</td>
-        </tr>
-        <tr>
-            <td>Craft Beer Selection</td>
-            <td>$6</td>
-        </tr>
-        <tr>
-            <td>House Wine (Red/White)</td>
-            <td>$8</td>
-        </tr>
-    </table>
-    <p><strong>Note:</strong> Prices may vary based on the number of plates ordered.</p>
-</div>
-
-<div class="container" id="events">
-    <h2>Upcoming Events</h2>
-    <p>Join us for live music nights and special themed events. Check our social media for updates!</p>
-</div>
-
-<div class="container" id="gallery">
-    <h2>Gallery</h2>
-    <p>Explore our photo gallery to see the lounge, our food, and our happy customers!</p>
-    <img class="happy" src="image2.jpg">
-</div>
-
-<div class="container" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
-    <p><strong>Location:</strong>  4th Avenue, firstact Aboju, Ojo Lagos. </p>
-    <p><strong>Business Hours:</strong> Mon-Sun: 10 AM - 11 PM</p>
-</div>
-
-<footer>
-    <p>&copy; 2024 Greenlife Lounge and Bar | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms and Conditions</a></p>
-</footer>
-
+    <footer>
+        <p>Greenlife Lounge and Bar &copy; 2024</p>
+    </footer>
 </body>
 </html>
