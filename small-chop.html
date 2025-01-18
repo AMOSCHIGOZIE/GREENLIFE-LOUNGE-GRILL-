@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzy Gourmet - Small Chops</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        </div>
+        <h1>Small Chops Package N' Price</h1>
+    </header>
+
+    <!-- Image Display Section -->
+    <section id="image-display">
+        <h2>Our Special Small Chops</h2>
+        <img id="main-image" src="small-chops.jpg" alt="Small Chops" />
+    </section>
+
+    <!-- Menu Section -->
+    <main>
+        <div class="menu-container">
+            <div class="menu-item" onclick="changeImage('small-chops.jpg')">
+                <h2>₦1000</h2>
+                <ul>
+                    <li>Samosa (1)</li>
+                    <li>Spring rolls (1)</li>
+                    <li>Chicken (1)</li>
+                    <li>Puff-puff (3)</li>
+                    <li>Mosa (3)</li>
+                </ul>
+            </div>
+            <div class="menu-item" onclick="changeImage('small-chops2.jpg')">
+                <h2>₦1100</h2>
+                <ul>
+                    <li>Samosa (1)</li>
+                    <li>Spring rolls (1)</li>
+                    <li>Chicken (1)</li>
+                    <li>Puff-puff (5)</li>
+                    <li>Mosa (5)</li>
+                </ul>
+            </div>
+            <div class="menu-item" onclick="changeImage('small-chops3.jpg')">
+                <h2>₦1300</h2>
+                <ul>
+                    <li>Samosa (1)</li>
+                    <li>Spring rolls (1)</li>
+                    <li>Chicken (1)</li>
+                    <li>Puff-puff (3)</li>
+                    <li>Mosa (3)</li>
+                    <li>Gizzard (1)</li>
+                </ul>
+            </div>
+            <div class="menu-item" onclick="changeImage('small-chops4.jpg')">
+                <h2>₦1500</h2>
+                <ul>
+                    <li>Samosa (1)</li>
+                    <li>Spring rolls (1)</li>
+                    <li>Chicken (1)</li>
+                    <li>Puff-puff (4)</li>
+                    <li>Mosa (4)</li>
+                    <li>Gizzards (2)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <a href="tel:08034794114" class="order-btn">Order Now: 08034794114</a>
+    </footer>
+
+    <script>
+    // Function to change the displayed image
+function changeImage(imageSrc) {
+    document.getElementById('main-image').src = imageSrc;
+}
+       
+    </script>
+</body>
+</html>
