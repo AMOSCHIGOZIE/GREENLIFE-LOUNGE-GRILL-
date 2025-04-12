@@ -447,3 +447,42 @@ a {
         opacity: 1;
     }
 }
+
+
+
+/* Hide message by default, show site */
+.site-wrapper {
+  display: block;
+}
+.desktop-message {
+  display: none;
+}
+
+/* Glitch animation keyframes */
+@keyframes bg-glitch {
+  0% { background-color: white; }
+  20% { background-color: #f2f2f2; }
+  40% { background-color: #eaeaea; }
+  60% { background-color: white; }
+  80% { background-color: #f5f5f5; }
+  100% { background-color: white; }
+}
+
+/* On large screens: hide site, show glitch message */
+@media (min-width: 768px) {
+  .site-wrapper {
+    display: none;
+  }
+  .desktop-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: bg-glitch 0.4s infinite;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+}
