@@ -450,13 +450,15 @@ a {
 
 
 
-/* Hide message by default, show site */
-.site-wrapper {
-  display: block;
+
+
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
 }
-.desktop-message {
-  display: none;
-}
+
 
 /* Glitch animation keyframes */
 @keyframes bg-glitch {
@@ -468,17 +470,18 @@ a {
   100% { background-color: white; }
 }
 
-/* On large screens: hide site, show glitch message */
+/* On large screens: hide the site, show the glitch message */
 @media (min-width: 768px) {
   .site-wrapper {
-    display: none;
+    display: none;  /* Hide the main site */
   }
+  
   .desktop-message {
-    display: flex;
+    display: flex; /* Make sure it's displayed */
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    animation: bg-glitch 0.4s infinite;
+    height: 100vh; /* Full height of the viewport */
+    animation: bg-glitch 0.4s infinite; /* Apply the glitch effect */
     color: red;
     font-size: 24px;
     font-weight: bold;
