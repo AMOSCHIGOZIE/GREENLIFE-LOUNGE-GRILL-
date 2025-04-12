@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockroll Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+    
+                   .buttons {
+          background-color: whitesmoke;
+          color: red;
+          padding: 15px 35px;
+          font-size: 18px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          margin-top: 40px; /* Add space before the button */
+      }
+    
+          .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+        .nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin-right: 5px; /* Adjust this value to control the space */
+}
+
+.nav-links a:last-child {
+    margin-right: 0; /* Ensure no extra space after the last link */
+}
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 15px;
+        }
+        .signup-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Centering container */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px; /* Space between images and text */
+            margin-top: 50px;
+        }
+        .container img {
+            width: 250px; /* Adjust size */
+            height: auto;
+        }
+        .text {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            max-width: 400px; /* Prevent text from stretching too much */
+        }
+        .content-container {
+            margin-top: 40px;
+        }
+
+        p {
+            color: #696969;
+            font-size: 18px;
+        }
+
+        /* Centering the button */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .scroll-down {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .mouse-icon {
+            width: 24px;
+            height: 36px;
+            border: 2px solid black;
+            border-radius: 12px;
+            position: relative;
+            background-color: black;
+        }
+
+        .mouse-icon::before {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background-color: white;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="logo">Blockroll</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Company</a>
+        </div>
+        <div class="nav-buttons">
+            <a href="#">Login</a>
+            <button class="signup-btn">Signup</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="image.png" alt="Image 1"> <!-- Left Image -->
+        <div class="text">People, Payroll and <br> Payments Simplified</div>
+        <img src="image2.png" alt="Image 2"> <!-- Right Image -->
+    </div>
+
+    <div class="content-container">
+        <p> 
+            With Blockroll, Effortless Process Payroll, Accept <br>
+            Global Gig Payments, and Connect with Top Talent <br>
+            Worldwide.
+        </p>
+    </div>
+
+    <!-- Button is now always centered -->
+    <div class="button-container">
+        <button class="button">Get Started</button>
+    </div>
+
+    <div class="scroll-down">
+        <div class="mouse-icon"></div>
+    </div>
+ <p>  Victor Scroll down  <br> Pay me My money before i link it 😡 <br> Or you tell me when u will pay me  </p>
+     <button class="buttons">Accept</button>   <button class="buttons">Reject</button>
+
+</body>
+</html>
